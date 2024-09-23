@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cover {
+    width: 1584px;
+    height: 396px;
+    background: linear-gradient(135deg, #282c34 30%, #61dafb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    /* Adicionado para empilhar verticalmente */
+    text-align: center;
+    /* Alinhamento centralizado do texto */
+}
+
+.cover::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 70%);
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.text-section {
+    z-index: 1;
+    margin-bottom: 20px;
+    /* Espaçamento abaixo do título */
+}
+
+.text-section h1 {
+    font-size: 44px;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.icons-section {
+    display: flex;
+    gap: 20px;
+    z-index: 1;
+    margin-bottom: 10px;
+    /* Espaçamento abaixo dos ícones */
+}
+
+.icon {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.icon:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.icon img {
+    width: 80px;
+    height: 80px;
+}
+
+.icon img:hover {
+    filter: drop-shadow(1px 2px 4px black);
+}
+
+.skills-text {
+    font-size: 22px;
+    color: #dcdcdc;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
